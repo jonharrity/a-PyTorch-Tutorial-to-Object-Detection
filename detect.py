@@ -103,6 +103,6 @@ if __name__ == '__main__':
         img_path = sys.argv[1]
     original_image = Image.open(img_path, mode='r')
     original_image = original_image.convert('RGB')
-    res = detect(original_image, min_score=0.2, max_overlap=0.5, top_k=200)
+    res = detect(original_image, min_score=0.5, max_overlap=0.5, top_k=200)
     res.save('detect_result.jpg')
     res.show()
